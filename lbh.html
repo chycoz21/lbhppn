@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bantuan Hukum Patriot Putra Nusantara - Diktri Winanto, SH & Partners</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#800020',
+                        secondary: '#D4AF37',
+                    },
+                    fontFamily: {
+                        'serif': ['Times New Roman', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .animate-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" class="floating-whatsapp bg-green-500 text-white p-4 rounded-full shadow-lg">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="http://static.photos/legal/200x200/1" alt="Logo" class="h-16 mr-3">
+                <div>
+                    <h1 class="text-xl font-bold text-primary font-serif">Bantuan Hukum Patriot Putra Nusantara</h1>
+                    <p class="text-sm text-gray-600 font-serif">Diktri Winanto, SH & Partners</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-primary hover:text-secondary">Beranda</a>
+                <a href="#about" class="text-gray-700 hover:text-primary">Tentang Kami</a>
+                <a href="#services" class="text-gray-700 hover:text-primary">Layanan</a>
+                <a href="#team" class="text-gray-700 hover:text-primary">Tim</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-primary">Testimoni</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary">Kontak</a>
+            </nav>
+            <button class="md:hidden text-primary text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-primary text-white py-20">
+        <div class="container mx-auto px-4 text-center animate-on-scroll">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 font-serif">"Mengawal Keadilan, Menjaga Hak Anda"</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Profesional, Patriotik, dan Berintegritas dalam memberikan solusi hukum terbaik untuk Anda.</p>
+            <a href="#contact" class="bg-secondary text-primary font-bold px-8 py-3 rounded-md hover:bg-yellow-600 transition duration-300">Konsultasi Gratis</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-primary mb-4 font-serif">Tentang Kami</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-primary mb-4 font-serif">Visi & Misi</h3>
+                    <p class="mb-6 text-gray-700">Bantuan Hukum Patriot Putra Nusantara hadir sebagai lembaga hukum yang profesional, patriotik, dan solutif. Kami percaya hukum harus menjadi pelindung, bukan beban bagi masyarakat.</p>
+                    <h4 class="text-xl font-bold text-primary mb-2 font-serif">Visi</h4>
+                    <p class="mb-4 text-gray-700">Menjadi lembaga bantuan hukum yang terpercaya, patriotik, dan berdampak nyata bagi masyarakat.</p>
+                    <h4 class="text-xl font-bold text-primary mb-2 font-serif">Misi</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Memberikan layanan hukum yang berintegritas, profesional, dan terjangkau.</li>
+                        <li>Mengedepankan nilai patriotisme & keadilan dalam setiap pendampingan hukum.</li>
+                        <li>Menjadi mitra hukum strategis untuk individu, perusahaan, dan institusi.</li>
+                        <li>Memberikan edukasi hukum agar masyarakat lebih paham akan haknya.</li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll">
+                    <img src="http://static.photos/legal/640x360/2" alt="Tentang Kami" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-primary mb-4 font-serif">Layanan Hukum</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-on-scroll">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-serif">Kasus Pidana</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Tindak Pidana Korupsi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Tindak Pidana Narkotika</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Tindak Pidana ITE</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Tindak Pidana Perbankan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Tindak Pidana Umum (KUHP)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-on-scroll">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-serif">Kasus Perdata/TUN</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Gugatan Wanprestasi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Gugatan Cerai & Gono-Gini</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Hak Asuh Anak</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Sengketa Ketenagakerjaan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Gugatan PTUN</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-on-scroll">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-serif">Layanan Lainnya</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Keluarga & Perdata</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Umum & Perjanjian</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Ketenagakerjaan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Litigasi & Pengadilan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Institusi & Pemerintahan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pricing -->
+            <div class="mt-16 animate-on-scroll">
+                <h3 class="text-2xl font-bold text-primary text-center mb-8 font-serif">Harga & Paket Layanan</h3>
+                <div class="bg-white rounded-lg shadow-md p-6 max-w-4xl mx-auto">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead>
+                                <tr class="bg-primary text-white">
+                                    <th class="py-3 px-4 text-left font-serif">Layanan</th>
+                                    <th class="py-3 px-4 text-right font-serif">Biaya Mulai Dari</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Perceraian</td>
+                                    <td class="py-3 px-4 text-right">Rp3.500.000 – Rp5.000.000*</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Ahli Waris</td>
+                                    <td class="py-3 px-4 text-right">Rp3.500.000 – Rp5.000.000*</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Perkara Pidana</td>
+                                    <td class="py-3 px-4 text-right">Mulai Rp7.500.000*</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4">Kontrak & Perjanjian</td>
+                                    <td class="py-3 px-4 text-right">Mulai Rp2.500.000*</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Pendampingan di Kepolisian</td>
+                                    <td class="py-3 px-4 text-right">Mulai Rp5.000.000*</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4">*Biaya disesuaikan kompleksitas perkara. Konsultasi pertama GRATIS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-primary mb-4 font-serif">Artikel & Edukasi Hukum</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="swiper article-swiper animate-on-scroll">
+                <div class="swiper-wrapper pb-10">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <img src="http://static.photos/legal/640x360/3" alt="Artikel 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 font-serif">5 Hal yang Wajib Diketahui Saat Perceraian</h3>
+                            <p class="text-gray-700 mb-4">Pahami hak dan kewajiban hukum Anda sebelum memutuskan untuk bercerai.</p>
+                            <a href="#" class="text-primary font-bold hover:text-secondary">Baca Selengkapnya →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <img src="http://static.photos/legal/640x360/4" alt="Artikel 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 font-serif">Cara Mengurus Dispensasi Nikah</h3>
+                            <p class="text-gray-700 mb-4">Proses lengkap pengajuan dispensasi nikah untuk usia di bawah ketentuan.</p>
+                            <a href="#" class="text-primary font-bold hover:text-secondary">Baca Selengkapnya →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <img src="http://static.photos/legal/640x360/5" alt="Artikel 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 font-serif">Perbedaan Hibah & Warisan</h3>
+                            <p class="text-gray-700 mb-4">Ketahui perbedaan mendasar antara hibah dan warisan dalam hukum Indonesia.</p>
+                            <a href="#" class="text-primary font-bold hover:text-secondary">Baca Selengkapnya →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <img src="http://static.photos/legal/640x360/6" alt="Artikel 4" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 font-serif">Proses Hukum Kasus ITE</h3>
+                            <p class="text-gray-700 mb-4">Langkah-langkah yang perlu dilakukan ketika menghadapi kasus UU ITE.</p>
+                            <a href="#" class="text-primary font-bold hover:text-secondary">Baca Selengkapnya →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-primary mb-4 font-serif">Tim Kami</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="swiper team-swiper animate-on-scroll">
+                <div class="swiper-wrapper pb-12">
+                    <!-- Team Member 1 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-secondary">
+                                <img src="http://static.photos/people/320x240/1" alt="Diktri Winanto" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold font-serif">Diktri Winanto, SH</h3>
+                            <p class="text-secondary mb-2">Managing Partner</p>
+                            <p class="text-gray-700 text-sm">Keahlian: Hukum Perdata, Hukum Keluarga, dan Litigasi Kompleks</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-secondary">
+                                <img src="http://static.photos/people/320x240/2" alt="Partner A" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold font-serif">Rina Wijayanti, SH</h3>
+                            <p class="text-secondary mb-2">Senior Lawyer</p>
+                            <p class="text-gray-700 text-sm">Keahlian: Pidana, Ketenagakerjaan, dan Sengketa Bisnis</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-secondary">
+                                <img src="http://static.photos/people/320x240/3" alt="Partner B" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold font-serif">Budi Santoso, SH, MH</h3>
+                            <p class="text-secondary mb-2">Senior Lawyer</p>
+                            <p class="text-gray-700 text-sm">Keahlian: Hukum Waris, Kontrak, dan Mediasi</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 4 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-secondary">
+                                <img src="http://static.photos/people/320x240/4" alt="Partner C" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold font-serif">Antonius Wibowo, SH</h3>
+                            <p class="text-secondary mb-2">Associate Lawyer</p>
+                            <p class="text-gray-700 text-sm">Keahlian: Hukum Pidana Khusus dan PTUN</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 5 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-secondary">
+                                <img src="http://static.photos/people/320x240/5" alt="Partner D" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold font-serif">Dewi Lestari, SH</h3>
+                            <p class="text-secondary mb-2">Associate Lawyer</p>
+                            <p class="text-gray-700 text-sm">Keahlian: Hukum Keluarga dan Perlindungan Anak</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 6 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-secondary">
+                                <img src="http://static.photos/people/320x240/6" alt="Staff" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold font-serif">Tim Paralegal & Staf</h3>
+                            <p class="text-secondary mb-2">Support Team</p>
+                            <p class="text-gray-700 text-sm">Mendukung penelitian, dokumentasi, dan pelayanan konsultasi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Gallery -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-primary mb-4 font-serif">Galeri Tim</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+                <p class="text-gray-700 mt-4">Aktivitas dan momen tim kami dalam memberikan pelayanan hukum terbaik</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 animate-on-scroll">
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="http://static.photos/office/640x360/1" alt="Team Activity 1" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="http://static.photos/office/640x360/2" alt="Team Activity 2" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="http://static.photos/office/640x360/3" alt="Team Activity 3" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="http://static.photos/office/640x360/4" alt="Team Activity 4" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="http://static.photos/office/640x360/5" alt="Team Activity 5" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="http://static.photos/office/640x360/6" alt="Team Activity 6" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="http://static.photos/office/640x360/7" alt="Team Activity 7" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="http://static.photos/office/640x360/8" alt="Team Activity 8" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold mb-4 font-serif">Testimoni Klien</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="swiper testimonial-swiper animate-on-scroll">
+                <div class="swiper-wrapper pb-12">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-secondary">
+                                    <img src="http://static.photos/people/200x200/7" alt="Client 1" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Rina Kartika</h4>
+                                    <p class="text-sm text-gray-600">Dokter</p>
+                                    <div class="flex mt-1">
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic">"Kasus perceraian saya ditangani dengan profesional, cepat, dan penuh empati. Saya merasa dilindungi sepenuhnya oleh tim Bantuan Hukum Patriot Putra Nusantara."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-secondary">
+                                    <img src="http://static.photos/people/200x200/8" alt="Client 2" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Budi Santoso</h4>
+                                    <p class="text-sm text-gray-600">Pengusaha</p>
+                                    <div class="flex mt-1">
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic">"Tim memberikan pendampingan hukum yang sangat baik dalam kasus sengketa bisnis saya. Solusi yang diberikan tepat dan membantu menyelesaikan masalah dengan cepat."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-secondary">
+                                    <img src="http://static.photos/people/200x200/9" alt="Client 3" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Siti Aminah</h4>
+                                    <p class="text-sm text-gray-600">Ibu Rumah Tangga</p>
+                                    <div class="flex mt-1">
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic">"Proses pengurusan warisan menjadi sangat mudah dengan bantuan tim. Mereka menjelaskan setiap langkah dengan jelas dan membantu menyelesaikan semua dokumen dengan baik."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-secondary">
+                                    <img src="http://static.photos/people/200x200/10" alt="Client 4" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Andi Wijaya</h4>
+                                    <p class="text-sm text-gray-600">Karyawan</p>
+                                    <div class="flex mt-1">
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic">"Ketika menghadapi masalah ketenagakerjaan, tim memberikan pendampingan yang sangat profesional. Hasilnya lebih dari yang saya harapkan."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <!-- Awards & Publications -->
+            <div class="mt-16 animate-on-scroll">
+                <h3 class="text-2xl font-bold text-center mb-8 font-serif">Penghargaan & Publikasi</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg border border-secondary border-opacity-30">
+                        <div class="text-4xl text-secondary mb-3 text-center">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-center mb-2 font-serif">Law Firm Terbaik 2023</h4>
+                        <p class="text-center text-sm">Penghargaan dari Asosiasi Advokat Indonesia untuk layanan hukum yang luar biasa</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg border border-secondary border-opacity-30">
+                        <div class="text-4xl text-secondary mb-3 text-center">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-center mb-2 font-serif">Featured in Media</h4>
+                        <p class="text-center text-sm">Dikutip dalam berbagai media nasional sebagai narasumber ahli hukum keluarga</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg border border-secondary border-opacity-30">
+                        <div class="text-4xl text-secondary mb-3 text-center">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-center mb-2 font-serif">Pro Bono Award</h4>
+                        <p class="text-center text-sm">Penghargaan untuk kontribusi dalam memberikan bantuan hukum gratis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-primary mb-4 font-serif">Hubungi Kami</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+                <p class="text-gray-700 mt-4 max-w-2xl mx-auto">Siap membantu menyelesaikan masalah hukum Anda dengan profesional dan integritas tinggi.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="animate-on-scroll">
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary mb-6 font-serif">Informasi Kontak</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-primary mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Alamat Kantor</h4>
+                                    <p>Jl. Patriot No. 123, Jakarta Pusat 10110</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-primary mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Telepon/WhatsApp</h4>
+                                    <p>+62 812-3456-7890</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-primary mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Email</h4>
+                                    <p>info@patriotputranusantara.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-primary mr-4 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Jam Operasional</h4>
+                                    <p>Senin-Jumat: 08.00 - 17.00 WIB</p>
+                                    <p>Sabtu: 09.00 - 14.00 WIB</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-primary mb-4 font-serif">Media Sosial</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-primary hover:text-secondary text-xl">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="text-primary hover:text-secondary text-xl">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-primary hover:text-secondary text-xl">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://wa.me/6281234567890" class="text-primary hover:text-secondary text-xl">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary mb-6 font-serif">Form Konsultasi</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Nama Lengkap</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">Nomor Telepon</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div class="mb-4">
+                                <label for="service" class="block text-gray-700 mb-2">Jenis Layanan</label>
+                                <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="">Pilih Layanan</option>
+                                    <option value="pidana">Kasus Pidana</option>
+                                    <option value="perdata">Kasus Perdata/TUN</option>
+                                    <option value="keluarga">Keluarga & Perdata</option>
+                                    <option value="perjanjian">Umum & Perjanjian</option>
+                                    <option value="ketenagakerjaan">Ketenagakerjaan</option>
+                                    <option value="litigasi">Litigasi & Pengadilan</option>
+                                    <option value="institusi">Institusi & Pemerintahan</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 mb-2">Pesan</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                            </div>
+                            <button type="submit" class="bg-primary text-white px-6 py-3 rounded-md hover:bg-red-900 transition duration-300 w-full font-bold">Kirim Permohonan Konsultasi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <div class="animate-on-scroll">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.82202061476919!3d-6.194661395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTEnMzAuOCJTIDEwNsKwNDknMjEuMyJF!5e0!3m2!1sen!2sid!4v1626238904000!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="http://static.photos/legal/200x200/1" alt="Logo" class="h-16 mb-4">
+                    <h3 class="text-xl font-bold mb-4 font-serif">Bantuan Hukum Patriot Putra Nusantara</h3>
+                    <p class="text-gray-400">Profesional, Patriotik, dan Berintegritas dalam memberikan solusi hukum terbaik untuk Anda.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2 font-serif">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-secondary">Kasus Pidana</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-secondary">Kasus Perdata/TUN</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-secondary">Keluarga & Perdata</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-secondary">Ketenagakerjaan</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2 font-serif">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-secondary">Tentang Kami</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-secondary">Tim Kami</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-secondary">Testimoni</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-secondary">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-secondary pb-2 font-serif">Hubungi Kami</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-400"><i class="fas fa-map-marker-alt text-secondary mr-2"></i> Jl. Patriot No. 123, Jakarta Pusat 10110</p>
+                        <p class="text-gray-400"><i class="fas fa-phone-alt text-secondary mr-2"></i> +62 812-3456-7890</p>
+                        <p class="text-gray-400"><i class="fas fa-envelope text-secondary mr-2"></i> info@patriotputranusantara.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 Bantuan Hukum Patriot Putra Nusantara - Diktri Winanto, SH & Partners. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swipers
+        const articleSwiper = new Swiper('.article-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.article-swiper .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
+
+        const teamSwiper = new Swiper('.team-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.team-swiper .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4,
+                },
+            }
+        });
+
+        const testimonialSwiper = new Swiper('.testimonial-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.testimonial-swiper .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+            }
+        });
+
+        // Animation on Scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // WhatsApp Notification
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                const isClosed = localStorage.getItem('whatsappNotifClosed');
+                if (!isClosed) {
+                    const notif = document.createElement('div');
+                    notif.className = 'fixed bottom-20 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs animate-bounce';
+                    notif.innerHTML = `
+                        <div class="flex justify-between items-start mb-2">
+                            <div class="flex items-center">
+                                <i class="fab fa-whatsapp mr-2 text-xl"></i>
+                                <span class="font-bold">Butuh Bantuan?</span>
+                            </div>
+                            <button class="text-white hover:text-gray-200" onclick="this.parentElement.parentElement.remove(); localStorage.setItem('whatsappNotifClosed', 'true')">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm">Klik untuk chat langsung dengan tim kami via WhatsApp</p>
+                    `;
+                    notif.onclick = function() {
+                        window.open('https://wa.me/6281234567890', '_blank');
+                    };
+                    document.body.appendChild(notif);
+                }
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
