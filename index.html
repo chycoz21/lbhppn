@@ -23,15 +23,48 @@
         }
     </script>
     <style>
-        .animate-on-scroll {
+        /* --- ANIMATION STYLES START --- */
+        /* Base state for all animations */
+        .animate-fade-in-up,
+        .animate-slide-in-left,
+        .animate-slide-in-right {
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s ease-out;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-        .animate-on-scroll.active {
+
+        /* Fade in Up */
+        .animate-fade-in-up {
+            transform: translateY(30px);
+        }
+        .animate-fade-in-up.active {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Slide in Left */
+        .animate-slide-in-left {
+            transform: translateX(-50px);
+        }
+        .animate-slide-in-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Slide in Right */
+        .animate-slide-in-right {
+            transform: translateX(50px);
+        }
+        .animate-slide-in-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Delay utilities */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        /* --- ANIMATION STYLES END --- */
+        
         .floating-whatsapp {
             position: fixed;
             bottom: 30px;
@@ -47,12 +80,10 @@
     </style>
 </head>
 <body class="font-sans bg-gray-50">
-    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/6281234567890" class="floating-whatsapp bg-green-500 text-white p-4 rounded-full shadow-lg">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
-    <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
@@ -76,26 +107,31 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="bg-primary text-white py-20">
-        <div class="container mx-auto px-4 text-center animate-on-scroll">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4 font-serif">"Mengawal Keadilan, Menjaga Hak Anda"</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Profesional, Patriotik, dan Berintegritas dalam memberikan solusi hukum terbaik untuk Anda.</p>
-            <a href="#contact" class="bg-secondary text-primary font-bold px-8 py-3 rounded-md hover:bg-yellow-600 transition duration-300">Konsultasi Gratis</a>
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="animate-slide-in-left text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-serif">"Mengawal Keadilan, Menjaga Hak Anda"</h2>
+                <p class="text-xl mb-8">Profesional, Patriotik, dan Berintegritas dalam memberikan solusi hukum terbaik untuk Anda.</p>
+                <a href="#contact" class="bg-secondary text-primary font-bold px-8 py-3 rounded-md hover:bg-yellow-600 transition duration-300">Konsultasi Gratis</a>
+            </div>
+            <div class="animate-slide-in-right">
+                <img src="http://static.photos/legal/640x360/1" alt="Gavel and Law Books" class="rounded-lg shadow-2xl mx-auto">
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-16 bg-white overflow-x-hidden">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12 animate-on-scroll">
+            <div class="text-center mb-12 animate-fade-in-up">
                 <h2 class="text-3xl font-bold text-primary mb-4 font-serif">Tentang Kami</h2>
                 <div class="w-24 h-1 bg-secondary mx-auto"></div>
             </div>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="animate-on-scroll">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-in-left">
+                    <img src="http://static.photos/legal/640x360/2" alt="Tentang Kami" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="animate-slide-in-right">
                     <h3 class="text-2xl font-bold text-primary mb-4 font-serif">Bantuan Hukum Patriot Putra Nusantara hadir sebagai lembaga hukum yang profesional, patriotik, dan solutif. Kami percaya hukum harus menjadi pelindung, bukan beban bagi masyarakat.</h3>
-                    <!--<p class="mb-6 text-gray-700">Bantuan Hukum Patriot Putra Nusantara hadir sebagai lembaga hukum yang profesional, patriotik, dan solutif. Kami percaya hukum harus menjadi pelindung, bukan beban bagi masyarakat.</p>-->
                     <h4 class="text-xl font-bold text-primary mb-2 font-serif">Visi</h4>
                     <p class="mb-4 text-gray-700">Menjadi lembaga bantuan hukum yang terpercaya, patriotik, dan berdampak nyata bagi masyarakat.</p>
                     <h4 class="text-xl font-bold text-primary mb-2 font-serif">Misi</h4>
@@ -106,158 +142,99 @@
                         <li>Memberikan edukasi hukum agar masyarakat lebih paham akan haknya.</li>
                     </ul>
                 </div>
-                <div class="animate-on-scroll">
-                    <img src="http://static.photos/legal/640x360/2" alt="Tentang Kami" class="rounded-lg shadow-lg w-full">
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-gray-100">
+    <section id="stats" class="py-16 bg-gray-100 overflow-x-hidden">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-primary mb-8 font-serif animate-fade-in-up">
+          Capaian Kami
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-md animate-slide-in-left">
+            <i class="fas fa-users text-5xl text-secondary mb-4"></i>
+            <h3 class="text-4xl font-bold text-primary mb-2 counter" data-target="250">0</h3>
+            <p class="text-gray-700 font-serif">Klien Terlayani</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-md animate-fade-in-up delay-200">
+            <i class="fas fa-gavel text-5xl text-secondary mb-4"></i>
+            <h3 class="text-4xl font-bold text-primary mb-2 counter" data-target="180">0</h3>
+            <p class="text-gray-700 font-serif">Kasus Terselesaikan</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-md animate-slide-in-right">
+            <i class="fas fa-hourglass-half text-5xl text-secondary mb-4"></i>
+            <h3 class="text-4xl font-bold text-primary mb-2 counter" data-target="25">0</h3>
+            <p class="text-gray-700 font-serif">Kasus Berlangsung</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-16 bg-white overflow-x-hidden">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12 animate-on-scroll">
+            <div class="text-center mb-12 animate-fade-in-up">
                 <h2 class="text-3xl font-bold text-primary mb-4 font-serif">Layanan Hukum</h2>
                 <div class="w-24 h-1 bg-secondary mx-auto"></div>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Service Card 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-on-scroll">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-fade-in-up">
                     <div class="text-primary text-4xl mb-4">
                         <i class="fas fa-balance-scale"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 font-serif">Kasus Pidana</h3>
                     <ul class="text-gray-700 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Tindak Pidana Korupsi</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Tindak Pidana Narkotika</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Tindak Pidana ITE (Informasi Transaksi Elektronik)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Tindak Pidana Pajak</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Tindak Pidana Perbankan</span>
-                        </li>                        
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Tindak Pidana Umum (KUHP)</span>
-                        </li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Tindak Pidana Korupsi</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Tindak Pidana Narkotika</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Tindak Pidana ITE</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Tindak Pidana Pajak</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Tindak Pidana Perbankan</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Tindak Pidana Umum (KUHP)</span></li>
                     </ul>
                 </div>
 
-                <!-- Service Card 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-on-scroll">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-fade-in-up delay-200">
                     <div class="text-primary text-4xl mb-4">
                         <i class="fas fa-gavel"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 font-serif">Kasus Perdata/TUN</h3>
                     <ul class="text-gray-700 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Gugatan Wanprestasi</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Gugatan PMH (Perbuatan Melawan Hukum)</span>
-                        </li>                        
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Gugatan Cerai & Gono-Gini</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Hak Asuh Anak</span>
-                        </li>
-                         <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Gugatan Sengketa Kepemilikan</span>
-                        </li>                       
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Gugatan Perkara Hubungan Industrial / Ketenagakerjaan</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Gugatan Keputusan Pejabat Tata Usaha Negara (PTUN)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Gugatan antar organ internal Perseroan Terbatas (PT)</span>
-                        </li> 
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Gugatan antar organ internal Yayasan.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Dan Lain-Lain</span>
-                        </li>                          
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Gugatan Wanprestasi</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Gugatan PMH</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Gugatan Cerai & Gono-Gini</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Hak Asuh Anak</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Gugatan Sengketa Kepemilikan</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Perkara Hubungan Industrial</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Gugatan Keputusan PTUN</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Sengketa Internal PT/Yayasan</span></li>
                     </ul>
                 </div>
 
-                <!-- Service Card 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-on-scroll">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-fade-in-up delay-300">
                     <div class="text-primary text-4xl mb-4">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 font-serif">Layanan Lainnya</h3>
                     <ul class="text-gray-700 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Keluarga & Perdata</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Umum & Perjanjian</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Ketenagakerjaan</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Litigasi & Pengadilan</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Institusi & Pemerintahan</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Institusi & Pemerintahan</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Gugatan cerai, dispensasi nikah, hadhanah, penetapan ahli waris, harta bersama, pengangkatan anak, perjanjian pranikah, dll.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Kontrak, surat hukum, penagihan piutang, mediasi non-litigasi.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Perselisihan hubungan industrial, PKWT/PKWTT, pendampingan tenaga kerja.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
-                            <span>Pendampingan di kepolisian/kejaksaan, negosiasi bisnis, mediasi, klaim asuransi.</span>
-                        </li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Keluarga & Waris</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Kontrak & Perjanjian</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Ketenagakerjaan</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Litigasi & Non-Litigasi</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Pendampingan Hukum</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Mediasi & Negosiasi</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2"></i><span>Legal Opinion</span></li>
                     </ul>
                 </div>
             </div>
-
-            <!-- Pricing -->
+            
+            <div class="mt-16 animate-fade-in-up">
+                </div>
+        </div>
+    </section>
+                <!-- Pricing -->
             <div class="mt-16 animate-on-scroll">
                 <h3 class="text-2xl font-bold text-primary text-center mb-8 font-serif">Harga & Paket Layanan</h3>
                 <div class="bg-white rounded-lg shadow-md p-6 max-w-4xl mx-auto">
@@ -665,118 +642,73 @@
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
+    <section id="contact" class="py-16 bg-white overflow-x-hidden">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12 animate-on-scroll">
+            <div class="text-center mb-12 animate-fade-in-up">
                 <h2 class="text-3xl font-bold text-primary mb-4 font-serif">Hubungi Kami</h2>
                 <div class="w-24 h-1 bg-secondary mx-auto"></div>
                 <p class="text-gray-700 mt-4 max-w-2xl mx-auto">Siap membantu menyelesaikan masalah hukum Anda dengan profesional dan integritas tinggi.</p>
             </div>
             
             <div class="grid md:grid-cols-2 gap-8 items-start">
-                <div class="animate-on-scroll">
+                <div class="animate-fade-in-up">
                     <div class="bg-gray-100 p-8 rounded-lg shadow-md">
                         <h3 class="text-xl font-bold text-primary mb-6 font-serif">Informasi Kontak</h3>
-                        
                         <div class="space-y-4">
                             <div class="flex items-start">
-                                <div class="text-primary mr-4 mt-1">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Alamat Kantor</h4>
-                                    <p>Jl. Patriot No. 123, Jakarta Pusat 10110</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="text-primary mr-4 mt-1">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Telepon/WhatsApp</h4>
-                                    <p>+62 812-3456-7890</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="text-primary mr-4 mt-1">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Email</h4>
-                                    <p>info@patriotputranusantara.com</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="text-primary mr-4 mt-1">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Jam Operasional</h4>
-                                    <p>Senin-Jumat: 08.00 - 17.00 WIB</p>
-                                    <p>Sabtu: 09.00 - 14.00 WIB</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-bold text-primary mb-4 font-serif">Media Sosial</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-primary hover:text-secondary text-xl">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="#" class="text-primary hover:text-secondary text-xl">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="text-primary hover:text-secondary text-xl">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me/6281234567890" class="text-primary hover:text-secondary text-xl">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                            </div>
+                                 <div class="text-primary mr-4 mt-1"><i class="fas fa-map-marker-alt"></i></div>
+                                 <div>
+                                     <h4 class="font-bold">Alamat Kantor</h4>
+                                     <p>Jl. Patriot No. 123, Jakarta Pusat 10110</p>
+                                 </div>
+                             </div>
+                             <div class="flex items-start">
+                                 <div class="text-primary mr-4 mt-1"><i class="fas fa-phone-alt"></i></div>
+                                 <div>
+                                     <h4 class="font-bold">Telepon/WhatsApp</h4>
+                                     <p>+62 812-3456-7890</p>
+                                 </div>
+                             </div>
+                             <div class="flex items-start">
+                                 <div class="text-primary mr-4 mt-1"><i class="fas fa-envelope"></i></div>
+                                 <div>
+                                     <h4 class="font-bold">Email</h4>
+                                     <p>info@patriotputranusantara.com</p>
+                                 </div>
+                             </div>
+                             <div class="flex items-start">
+                                 <div class="text-primary mr-4 mt-1"><i class="fas fa-clock"></i></div>
+                                 <div>
+                                     <h4 class="font-bold">Jam Operasional</h4>
+                                     <p>Senin-Jumat: 08.00 - 17.00 WIB</p>
+                                     <p>Sabtu: 09.00 - 14.00 WIB</p>
+                                 </div>
+                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="animate-on-scroll">
+                <div class="animate-fade-in-up delay-200">
                     <div class="bg-gray-100 p-8 rounded-lg shadow-md">
                         <h3 class="text-xl font-bold text-primary mb-6 font-serif">Form Konsultasi</h3>
                         <form>
                             <div class="mb-4">
-                                <label for="name" class="block text-gray-700 mb-2">Nama Lengkap</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="block text-gray-700 mb-2">Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
-                            <div class="mb-4">
-                                <label for="phone" class="block text-gray-700 mb-2">Nomor Telepon</label>
-                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
-                            <div class="mb-4">
-                                <label for="service" class="block text-gray-700 mb-2">Jenis Layanan</label>
-                                <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                                    <option value="">Pilih Layanan</option>
-                                    <option value="pidana">Kasus Pidana</option>
-                                    <option value="perdata">Kasus Perdata/TUN</option>
-                                    <option value="keluarga">Keluarga & Perdata</option>
-                                    <option value="perjanjian">Umum & Perjanjian</option>
-                                    <option value="ketenagakerjaan">Ketenagakerjaan</option>
-                                    <option value="litigasi">Litigasi & Pengadilan</option>
-                                    <option value="institusi">Institusi & Pemerintahan</option>
-                                </select>
-                            </div>
-                            <div class="mb-4">
-                                <label for="message" class="block text-gray-700 mb-2">Pesan</label>
-                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-                            </div>
-                            <button type="submit" class="bg-primary text-white px-6 py-3 rounded-md hover:bg-red-900 transition duration-300 w-full font-bold">Kirim Permohonan Konsultasi</button>
+                                 <label for="name" class="block text-gray-700 mb-2">Nama Lengkap</label>
+                                 <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                             </div>
+                             <div class="mb-4">
+                                 <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                 <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                             </div>
+                             <div class="mb-4">
+                                 <label for="phone" class="block text-gray-700 mb-2">Nomor Telepon</label>
+                                 <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                             </div>
+                             <div class="mb-4">
+                                 <label for="message" class="block text-gray-700 mb-2">Pesan</label>
+                                 <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                             </div>
+                             <button type="submit" class="bg-primary text-white px-6 py-3 rounded-md hover:bg-red-900 transition duration-300 w-full font-bold">Kirim Permohonan Konsultasi</button>
                         </form>
                     </div>
                 </div>
@@ -784,12 +716,11 @@
         </div>
     </section>
 
-    <!-- Map -->
-    <div class="animate-on-scroll">
+    <div class="animate-fade-in-up">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.82202061476919!3d-6.194661395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTEnMzAuOCJTIDEwNsKwNDknMjEuMyJF!5e0!3m2!1sen!2sid!4v1626238904000!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
-    <!-- Footer -->
+   <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
@@ -830,13 +761,67 @@
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>&copy; 2023 Bantuan Hukum Patriot Putra Nusantara - Diktri Winanto, SH & Partners. All Rights Reserved.</p>
+                <p>&copy; 2025 Bantuan Hukum Patriot Putra Nusantara - Diktri Winanto, SH & Partners. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        // ... (Kode Inisialisasi Swiper Anda) ...
+
+        // --- SCRIPT ANIMASI BARU ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: unobserve after animation to prevent re-triggering
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            });
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // ... (Sisa skrip Anda, termasuk skrip counter) ...
+        const counters = document.querySelectorAll('.counter');
+        const speed = 50; // kecepatan animasi
+
+        const runCounter = (counter) => {
+          const target = +counter.getAttribute('data-target');
+          const updateCount = () => {
+            const count = +counter.innerText;
+            const inc = Math.ceil(target / speed);
+            if (count < target) {
+              counter.innerText = Math.min(count + inc, target); // Ensure it doesn't overshoot
+              setTimeout(updateCount, 30);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        };
+
+        const statSection = document.querySelector('#stats');
+        const statObserver = new IntersectionObserver(entries => {
+          if (entries[0].isIntersecting) {
+            counters.forEach(counter => runCounter(counter));
+            statObserver.unobserve(statSection); // Run only once
+          }
+        }, { threshold: 0.5 });
+        
+        if (statSection) {
+            statObserver.observe(statSection);
+        }
+    </script>
     <script>
         // Initialize Swipers
         const articleSwiper = new Swiper('.article-swiper', {
